@@ -1,0 +1,56 @@
+.page-bar__logo {
+  margin: 0;
+}
+
+.page-bar__email,
+.page-bar__tel {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-alice-blue;
+}
+
+.page-bar__email span,
+.page-bar__tel span {
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.page-bar__callback {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  min-height: 40px;
+  padding: 10px 15px;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-alice-blue;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+
+  border: 1px solid $color-alice-blue;
+  border-radius: 3px;
+
+  transition: $trans-default;
+
+  &:hover,
+  &:focus {
+    color: $color-black-pearl;
+
+    background-color: $color-alice-blue;
+  }
+
+  &:active {
+    color: $color-black-pearl-30;
+  }
+
+  @include vp-1023 {
+    display: none;
+  }
+}

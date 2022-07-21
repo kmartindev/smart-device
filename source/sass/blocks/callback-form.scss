@@ -1,0 +1,67 @@
+.callback-form__title {
+  margin: 0;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-default-white;
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.callback-form__description {
+  margin: 0;
+
+  font-family: "PT Mono", "Courier New", monospace;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.callback-form__field input {
+  min-height: 50px;
+  padding: 15px 15px 13px;
+
+  font-family: "PT Mono", "Courier New", monospace;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+
+  background-color: $color-black-pearl-2-15;
+  border: none;
+  border-radius: 3px;
+}
+
+.callback-form__textarea textarea {
+  min-height: 155px;
+  padding: 25px 15px 13px;
+
+  font-family: "PT Mono", "Courier New", monospace;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+
+  background-color: $color-black-pearl-2-15;
+  border: none;
+  border-radius: 3px;
+}
+
+.callback-form__checkbox label {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+
+  opacity: 0.8;
+
+  cursor: pointer;
+}

@@ -1,0 +1,16 @@
+.logo {
+  width: 202px;
+  height: 55px;
+
+  @include vp-767 {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.logo--page-footer {
+  @include vp-767 {
+    width: 202px;
+    height: 55px;
+  }
+}
