@@ -17,25 +17,31 @@
         <div class="page-header__top">
           <div class="container">
             <div class="page-bar">
-              <p class="page-bar__logo">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="img/svg/logo.svg">
-                  <img class="logo" src="img/svg/logo-complete.svg" width="202" height="55" alt="Логотип">
-                </picture>
-              </p>
-              <a class="page-bar__email" href="mailto:info@sd.ru">
-                <svg width="21" height="20" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite_auto.svg#icon-email"></use>
-                </svg>
-                <span>info@sd.ru</span>
-              </a>
-              <a class="page-bar__tel" href="tel:+74950005252">
-                <svg width="21" height="20" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite_auto.svg#icon-tel"></use>
-                </svg>
-                <span>+7 (495) 000 52 52</span>
-              </a>
-              <a class="page-bar__callback" href="#">Заказать звонок</a>
+              <div class="page-bar__section  page-bar__section--left">
+                <p class="page-bar__logo">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/svg/logo.svg">
+                    <img class="logo" src="img/svg/logo-complete.svg" width="202" height="55" alt="Логотип">
+                  </picture>
+                </p>
+              </div>
+              <div class="page-bar__section  page-bar__section--center">
+                <a class="page-bar__email" href="mailto:info@sd.ru">
+                  <svg width="21" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#icon-email"></use>
+                  </svg>
+                  <span>info@sd.ru</span>
+                </a>
+                <a class="page-bar__tel" href="tel:+74950005252">
+                  <svg width="21" height="20" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#icon-tel"></use>
+                  </svg>
+                  <span>+7 (495) 000 52 52</span>
+                </a>
+              </div>
+              <div class="page-bar__section  page-bar__section--right">
+                <a class="page-bar__callback" href="#">Заказать звонок</a>
+              </div>
             </div>
           </div>
         </div>
@@ -44,7 +50,10 @@
             <div class="main-screen">
               <h1>Печатные платы</h1>
               <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-              <a href="#">Получить бесплатную консультацию</a>
+              <a href="#">
+                <span class="main-screen__button-text  main-screen__button-text--long">Получить бесплатную консультацию</span>
+                <span class="main-screen__button-text  main-screen__button-text--short">Бесплатная консультация</span>
+              </a>
             </div>
           </div>
         </div>
