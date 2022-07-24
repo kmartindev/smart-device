@@ -133,6 +133,8 @@
   border: 1px solid $color-alice-blue;
   border-radius: 3px;
 
+  user-select: none;
+
   transition: $trans-default;
 
   &:hover,
