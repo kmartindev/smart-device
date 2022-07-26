@@ -1,11 +1,16 @@
 .callback-form__title {
   margin: 0;
+  margin-bottom: 11px;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
   color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 8px;
+  }
 
   @include vp-767 {
     font-size: 30px;
@@ -15,19 +20,49 @@
 
 .callback-form__description {
   margin: 0;
+  margin-bottom: 35px;
 
   font-family: "PT Mono", "Courier New", monospace;
   font-size: 16px;
   line-height: 22px;
   color: $color-default-white;
 
+  @include vp-1023 {
+    margin-bottom: 25px;
+  }
+
   @include vp-767 {
+    margin-bottom: 33px;
+
     font-size: 14px;
     line-height: 19px;
   }
 }
 
+.callback-form__group--1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  margin-bottom: 20px;
+
+  @include vp-767 {
+    grid-template-columns: auto;
+    row-gap: 20px;
+  }
+}
+
+.callback-form__group--2 {
+  display: flex;
+  align-items: flex-end;
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .callback-form__field input {
+  width: 100%;
   min-height: 50px;
   padding: 15px 15px 13px;
 
@@ -39,9 +74,23 @@
   background-color: $color-black-pearl-2-15;
   border: none;
   border-radius: 3px;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+.callback-form__textarea {
+  margin-bottom: 35px;
+
+  @include vp-767 {
+    margin-bottom: 31px;
+  }
 }
 
 .callback-form__textarea textarea {
+  display: block;
+  width: 100%;
   min-height: 155px;
   padding: 25px 15px 13px;
 
@@ -53,9 +102,26 @@
   background-color: $color-black-pearl-2-15;
   border: none;
   border-radius: 3px;
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  @include vp-767 {
+    min-height: 180px;
+  }
+}
+
+.callback-form__checkbox {
+  order: 2;
 }
 
 .callback-form__checkbox label {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
   font-family: "PT Mono", "Courier New", monospace;
   font-size: 14px;
   line-height: 16px;
@@ -64,4 +130,46 @@
   opacity: 0.8;
 
   cursor: pointer;
+
+  &::before {
+    content: "";
+
+    display: block;
+    flex-shrink: 0;
+
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+
+    background: transparent;
+    border: 1px solid $color-default-white;
+    border-radius: 2px;
+  }
+}
+
+.callback-form__checkbox input:checked + label {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 2.5px;
+    transform: translateY(-50%);
+
+    width: 9px;
+    height: 6px;
+
+    background-image: url("../img/svg/checked.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.callback-form__checkbox input:hover + label,
+.callback-form__checkbox input:focus + label {
+  &::before {
+    outline: 1px solid $color-default-black;
+    outline-offset: 1px;
+  }
 }

@@ -54,3 +54,19 @@
     color: $color-default-white-70;
   }
 }
+
+.btn--callback {
+  flex-shrink: 0;
+  width: 265px;
+  margin-right: 50px;
+
+  @include vp-1023 {
+    margin-right: 85px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+}
