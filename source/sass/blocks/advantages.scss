@@ -1,12 +1,124 @@
+.advantages {
+  padding-top: 120px;
+  padding-bottom: 60px;
+
+  @include vp-1023 {
+    padding-top: 80px;
+    padding-bottom: 37px;
+  }
+
+  @include vp-767 {
+    padding-top: 50px;
+    padding-bottom: 24px;
+  }
+}
+
 .advantages__content ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 31px;
+  row-gap: 30px;
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  @include vp-767 {
+    grid-template-columns: auto;
+  }
+}
+
+.advantages__content li {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.advantages__content div {
+  position: relative;
+
+  width: 100%;
+  min-height: 300px;
+  padding: 40px 45px 35px;
+
+  border: 1px solid $color-whisper;
+  border-left: none;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: transform $trans-default;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-99%);
+
+    background-color: $color-deep-sky-blue;
+
+    transition: transform $trans-default;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transform: translateX(0);
+  }
+
+  @include vp-1023 {
+    min-height: 360px;
+    padding: 40px 45px 29px;
+  }
+
+  @include vp-767 {
+    min-height: 340px;
+    padding: 30px 30px 35px;
+  }
+}
+
+.advantages__content li:nth-child(n + 3) div {
+  @include vp-767 {
+    min-height: 325px;
+  }
+}
+
+.advantages__content div:hover svg,
+.advantages__content div:hover h3,
+.advantages__content div:hover p,
+.advantages__content div:focus svg,
+.advantages__content div:focus h3,
+.advantages__content div:focus p {
+  color: $color-alice-blue;
+}
+
+.advantages__content svg {
+  position: relative;
+
+  margin-bottom: 20px;
+
+  color: $color-deep-sky-blue;
+
+  transition: color $trans-default;
+
+  @include vp-1023 {
+    margin-bottom: 9px;
+  }
+
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .advantages__content h3 {
+  position: relative;
+
   margin: 0;
+  margin-bottom: 13px;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
@@ -14,19 +126,31 @@
   line-height: 34px;
   color: $color-deep-sky-blue;
 
+  transition: color $trans-default;
+
+  @include vp-1023 {
+    margin-bottom: 7px;
+  }
+
   @include vp-767 {
+    margin-bottom: 8px;
+
     font-size: 20px;
     line-height: 28px;
   }
 }
 
 .advantages__content p {
+  position: relative;
+
   margin: 0;
 
   font-family: "PT Mono", "Courier New", monospace;
   font-size: 16px;
   line-height: 22px;
   color: $color-black-pearl;
+
+  transition: color $trans-default;
 
   @include vp-767 {
     font-size: 14px;

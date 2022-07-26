@@ -1,5 +1,60 @@
-.about__info.about__content h2 {
+.about {
+  padding-top: 60px;
+  padding-bottom: 120px;
+
+  @include vp-1023 {
+    padding-top: 37px;
+    padding-bottom: 80px;
+  }
+
+  @include vp-767 {
+    padding-top: 24px;
+  }
+}
+
+.about__content {
+  position: relative;
+
+  min-height: 300px;
+  padding-left: 250px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 150px;
+    height: 320px;
+
+    background-image: url("../img/about.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include vp-1023 {
+      top: 5px;
+      left: -5px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  @include vp-1023 {
+    padding-left: 175px;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+  }
+}
+
+.about__content .about__info h2 {
   margin: 0;
+  margin-bottom: 12px;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
@@ -11,6 +66,28 @@
     font-size: 28px;
     line-height: 39px;
   }
+}
+
+.about__info {
+  overflow: hidden;
+  max-height: 234px;
+  margin-bottom: 20px;
+
+  transition: max-height $tf-default 0.7s;
+
+  @include vp-1023 {
+    max-height: 315px;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    max-height: 255px;
+    margin-bottom: 15px;
+  }
+}
+
+.about__info.is-open {
+  max-height: 1000px;
 }
 
 .about__info p {
@@ -27,6 +104,8 @@
   }
 
   @include vp-767 {
+    margin-bottom: 18px;
+
     font-size: 14px;
     line-height: 19px;
   }
