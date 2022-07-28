@@ -84,6 +84,18 @@
   background-repeat: no-repeat;
   background-size: 1493px 817px;
 
+  @supports (background-image: image-set(url("../img/services.webp") 1x)) {
+    background-image: image-set(url("../img/services.webp") 1x);
+  }
+
+  @include retina {
+    background-image: url("../img/services@2x.jpg");
+
+    @supports (background-image: image-set(url("../img/services@2x.webp") 2x)) {
+      background-image: image-set(url("../img/services@2x.webp") 2x);
+    }
+  }
+
   &::before {
     content: "";
 
@@ -131,22 +143,22 @@
 }
 
 .services__link--1 {
-  background-position: calc(50% + 383px) calc(50% - 34px);
+  background-position: calc(50% + 383px) calc(50% - 32px);
 
   @include vp-1023 {
-    background-position: calc(50% + 166px) calc(50% - 264px);
+    background-position: calc(50% + 168px) calc(50% - 264px);
   }
 
   @include vp-767 {
-    background-position: calc(50% + 236px) calc(50% - 16px);
+    background-position: calc(50% + 236px) calc(50% - 15px);
   }
 }
 
 .services__link--2 {
-  background-position: calc(50% + 37px) calc(50% - 34px);
+  background-position: calc(50% + 38px) calc(50% - 37px);
 
   @include vp-1023 {
-    background-position: calc(50% - 214px) calc(50% - 29px);
+    background-position: calc(50% - 216px) calc(50% - 30px);
   }
 
   @include vp-767 {
@@ -155,20 +167,21 @@
 }
 
 .services__link--3 {
-  background-position: calc(50% - 322px) calc(50% - 34px);
+  background-position: calc(50% - 322px) calc(50% - 26px);
 
   @include vp-1023 {
     background-position: calc(50% + 264px) calc(50% - 75px);
   }
 
   @include vp-767 {
-    background-position: calc(50% - 271px) calc(50% - 110px);
+    background-position: calc(50% - 272px) calc(50% - 110px);
   }
 }
 
 .services__content h3 {
   position: relative;
 
+  max-width: 170px;
   margin: 0;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;

@@ -64,8 +64,8 @@
           <div class="container">
             <div class="advantages__content">
               <ul>
-                <li data-el="card">
-                  <div data-el="card-box" tabindex="0">
+                <li data-el="card" tabindex="0">
+                  <div data-el="card-box">
                     <svg width="35" height="35" aria-hidden="true" focusable="false">
                       <use xlink:href="img/sprite_auto.svg#icon-stopwatch"></use>
                     </svg>
@@ -73,8 +73,8 @@
                     <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
                   </div>
                 </li>
-                <li data-el="card">
-                  <div data-el="card-box" tabindex="0">
+                <li data-el="card" tabindex="0">
+                  <div data-el="card-box">
                     <svg width="35" height="35" aria-hidden="true" focusable="false">
                       <use xlink:href="img/sprite_auto.svg#icon-hired"></use>
                     </svg>
@@ -82,8 +82,8 @@
                     <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспичивает хорошее качество нашей продукции.</p>
                   </div>
                 </li>
-                <li data-el="card">
-                  <div data-el="card-box" tabindex="0">
+                <li data-el="card" tabindex="0">
+                  <div data-el="card-box">
                     <svg width="35" height="35" aria-hidden="true" focusable="false">
                       <use xlink:href="img/sprite_auto.svg#icon-detective"></use>
                     </svg>
@@ -91,8 +91,8 @@
                     <p>По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфеденциальность.</p>
                   </div>
                 </li>
-                <li data-el="card">
-                  <div data-el="card-box" tabindex="0">
+                <li data-el="card" tabindex="0">
+                  <div data-el="card-box">
                     <svg width="35" height="35" aria-hidden="true" focusable="false">
                       <use xlink:href="img/sprite_auto.svg#icon-tag"></use>
                     </svg>
@@ -134,25 +134,25 @@
                 </li>
                 <li>
                   <a class="services__link  services__link--2" href="#">
-                    <h3>Монтаж печатных плат</h3>
+                    <h3>Монтаж печатных&nbsp;плат</h3>
                   </a>
                 </li>
                 <li>
                   <a class="services__link  services__link--3" href="#">
-                    <h3>Комплектующие для светотехники</h3>
+                    <h3>Комплектующие для&nbsp;светотехники</h3>
                   </a>
                 </li>
               </ul>
             </div>
           </div>
         </section>
-        <section class="callback">
+        <section class="callback" data-el="parallax">
           <h2 class="visually-hidden">Задать вопрос</h2>
           <div class="container">
             <div class="callback__content">
-              <form class="callback__form  callback-form" action="https://echo.htmlacademy.ru" method="post">
-                <p class="callback-form__title">Остались вопросы? Задайте их нам!</p>
-                <p class="callback-form__description">Мы проконсультируем Вас бесплатно</p>
+              <form class="callback__form  callback-form" data-el="callback-form" action="https://echo.htmlacademy.ru" method="post">
+                <p class="callback-form__title">Остались вопросы? Задайте их&nbsp;нам!</p>
+                <p class="callback-form__description">Мы&nbsp;проконсультируем Вас бесплатно</p>
                 <div class="callback-form__content">
                   <div class="callback-form__group  callback-form__group--1">
                     <div class="callback-form__field">
@@ -179,6 +179,8 @@
               </form>
             </div>
           </div>
+          <div class="callback__background" data-el="layer" data-speed="0.04"></div>
+          <div class="callback__plane" data-el="layer" data-speed="0.1"></div>
         </section>
       </main>
       <footer class="page-footer">

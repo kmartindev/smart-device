@@ -12,15 +12,13 @@
 }
 
 .footer-section__title {
+  position: relative;
+
   margin-bottom: 23px;
 
   @include vp-767 {
     margin-bottom: 0;
   }
-}
-
-.footer-section__title {
-  position: relative;
 }
 
 .footer-section__title button {

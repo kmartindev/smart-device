@@ -1119,25 +1119,25 @@ button,
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-.advantages__content div:hover::before,
-.advantages__content div:focus::before {
+.advantages__content li:hover div::before,
+.advantages__content li:focus div::before {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
 
-.advantages__content div:hover svg,
-.advantages__content div:hover h3,
-.advantages__content div:hover p,
-.advantages__content div:focus svg,
-.advantages__content div:focus h3,
-.advantages__content div:focus p {
+.advantages__content li:hover svg,
+.advantages__content li:hover h3,
+.advantages__content li:hover p,
+.advantages__content li:focus svg,
+.advantages__content li:focus h3,
+.advantages__content li:focus p {
   color: #f2f5f7;
 }
 
 .advantages__content svg {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   color: #00b2ff;
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
@@ -1192,6 +1192,13 @@ button,
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+@supports ((background-image: -webkit-image-set(url("../img/about.webp") 1x)) or (background-image: image-set(url("../img/about.webp") 1x))) {
+  .about__content::before {
+    background-image: -webkit-image-set(url("../img/about.webp") 1x);
+    background-image: image-set(url("../img/about.webp") 1x);
+  }
 }
 
 .about__content .about__info h2 {
@@ -1317,6 +1324,13 @@ button,
   background-size: 1493px 817px;
 }
 
+@supports ((background-image: -webkit-image-set(url("../img/services.webp") 1x)) or (background-image: image-set(url("../img/services.webp") 1x))) {
+  .services__content a {
+    background-image: -webkit-image-set(url("../img/services.webp") 1x);
+    background-image: image-set(url("../img/services.webp") 1x);
+  }
+}
+
 .services__content a::before {
   content: "";
   position: absolute;
@@ -1343,19 +1357,20 @@ button,
 }
 
 .services__link--1 {
-  background-position: calc(50% + 383px) calc(50% - 34px);
+  background-position: calc(50% + 383px) calc(50% - 32px);
 }
 
 .services__link--2 {
-  background-position: calc(50% + 37px) calc(50% - 34px);
+  background-position: calc(50% + 38px) calc(50% - 37px);
 }
 
 .services__link--3 {
-  background-position: calc(50% - 322px) calc(50% - 34px);
+  background-position: calc(50% - 322px) calc(50% - 26px);
 }
 
 .services__content h3 {
   position: relative;
+  max-width: 170px;
   margin: 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
@@ -1365,9 +1380,11 @@ button,
 }
 
 .callback {
+  position: relative;
   padding-top: 166px;
   padding-bottom: 250px;
   background-color: #00b2ff;
+  overflow: hidden;
 }
 
 .callback__content {
@@ -1378,12 +1395,45 @@ button,
 }
 
 .callback__form {
+  position: relative;
+  z-index: 2;
   grid-column: 2 / -1;
+}
+
+.callback__background {
+  position: absolute;
+  top: -50px;
+  right: calc(50% - 68px);
+  bottom: -50px;
+  left: -50px;
+  -webkit-clip-path: polygon(100% 0, 0 0, 0 99%);
+  clip-path: polygon(100% 0, 0 0, 0 99%);
+  background-color: rgba(4, 24, 39, 0.5);
+}
+
+.callback__plane {
+  position: absolute;
+  top: calc(50% - 174px);
+  left: calc(50% - 609px);
+  width: 510px;
+  height: 285px;
+  background-image: url("../img/plane.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@supports ((background-image: -webkit-image-set(url("../img/plane.webp") 1x)) or (background-image: image-set(url("../img/plane.webp") 1x))) {
+  .callback__plane {
+    background-image: -webkit-image-set(url("../img/plane.webp") 1x);
+    background-image: image-set(url("../img/plane.webp") 1x);
+  }
 }
 
 .callback-form__title {
   margin: 0;
   margin-bottom: 11px;
+  margin-left: -5px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -1398,6 +1448,10 @@ button,
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+}
+
+.callback-form__content {
+  padding-right: 10px;
 }
 
 .callback-form__group--1 {
@@ -1423,7 +1477,7 @@ button,
 .callback-form__field input {
   width: 100%;
   min-height: 50px;
-  padding: 15px 15px 13px;
+  padding: 14px 15px;
   font-family: "PT Mono", "Courier New", monospace;
   font-size: 16px;
   line-height: 22px;
@@ -1454,14 +1508,14 @@ button,
 }
 
 .callback-form__textarea {
-  margin-bottom: 35px;
+  margin-bottom: 36px;
 }
 
 .callback-form__textarea textarea {
   display: block;
   width: 100%;
   min-height: 155px;
-  padding: 25px 15px 13px;
+  padding: 24px 15px;
   font-family: "PT Mono", "Courier New", monospace;
   font-size: 16px;
   line-height: 22px;
@@ -1548,9 +1602,17 @@ button,
   outline-offset: 1px;
 }
 
+[data-el="layer"] {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
 .page-footer {
   padding-top: 50px;
-  padding-bottom: 57px;
+  padding-bottom: 59px;
   background-color: #041827;
 }
 
@@ -1941,6 +2003,23 @@ button,
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .callback__content {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
+
+  .callback__form {
+    grid-column: auto;
+  }
+
+  .callback__background {
+    display: none;
+  }
+
+  .callback__plane {
+    display: none;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1949,7 +2028,8 @@ button,
   }
 
   .btn--callback {
-    margin-right: 85px;
+    margin-right: 86px;
+    padding: 16px 25px 8px;
   }
 
   .page-header {
@@ -2045,6 +2125,12 @@ button,
     padding-bottom: 37px;
   }
 
+  .advantages__content div::before {
+    -webkit-transform: translateX(-98.5%);
+    -ms-transform: translateX(-98.5%);
+    transform: translateX(-98.5%);
+  }
+
   .advantages__content div {
     min-height: 360px;
     padding: 40px 45px 29px;
@@ -2064,17 +2150,25 @@ button,
   }
 
   .about__content::before {
-    top: 5px;
-    left: -5px;
+    top: 6px;
+    left: -3px;
   }
 
   .about__content {
-    padding-left: 175px;
+    padding-left: 176px;
   }
 
   .about__info {
-    max-height: 315px;
-    margin-bottom: 25px;
+    max-height: 320px;
+    margin-bottom: 20px;
+  }
+
+  .about__info p {
+    margin-bottom: 19px;
+  }
+
+  .about__content button {
+    padding: 14px 12px;
   }
 
   .services {
@@ -2098,11 +2192,11 @@ button,
   }
 
   .services__link--1 {
-    background-position: calc(50% + 166px) calc(50% - 264px);
+    background-position: calc(50% + 168px) calc(50% - 264px);
   }
 
   .services__link--2 {
-    background-position: calc(50% - 214px) calc(50% - 29px);
+    background-position: calc(50% - 216px) calc(50% - 30px);
   }
 
   .services__link--3 {
@@ -2111,24 +2205,44 @@ button,
 
   .callback {
     padding-top: 46px;
-    padding-bottom: 125px;
-  }
-
-  .callback__content {
-    -ms-grid-columns: auto;
-    grid-template-columns: auto;
-  }
-
-  .callback__form {
-    grid-column: auto;
+    padding-bottom: 127px;
   }
 
   .callback-form__title {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    margin-left: 1px;
   }
 
   .callback-form__description {
     margin-bottom: 25px;
+  }
+
+  .callback-form__content {
+    padding-right: 0;
+  }
+
+  .callback-form__textarea {
+    margin-bottom: 35px;
+  }
+
+  .callback-form__textarea textarea {
+    padding: 30px 15px;
+  }
+
+  .callback-form__checkbox {
+    padding-bottom: 2px;
+  }
+
+  .callback-form__checkbox label::before {
+    -webkit-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    transform: translateY(-1px);
+  }
+
+  .callback-form__checkbox input:checked + label::after {
+    -webkit-transform: translateY(calc(-50% - 2px));
+    -ms-transform: translateY(calc(-50% - 2px));
+    transform: translateY(calc(-50% - 2px));
   }
 
   .page-footer {
@@ -2221,6 +2335,7 @@ button,
     width: 100%;
     margin-right: 0;
     margin-bottom: 24px;
+    padding: 14px 25px 10px;
   }
 
   .modal__wrapper {
@@ -2374,7 +2489,7 @@ button,
 
   .about__info {
     max-height: 255px;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
   }
 
   .about__info p {
@@ -2386,7 +2501,7 @@ button,
   .about__content button {
     width: 160px;
     min-height: 35px;
-    padding: 8px 15px 11px;
+    padding: 8px 15px 9px;
   }
 
   .services {
@@ -2418,7 +2533,7 @@ button,
   }
 
   .services__link--1 {
-    background-position: calc(50% + 236px) calc(50% - 16px);
+    background-position: calc(50% + 236px) calc(50% - 15px);
   }
 
   .services__link--2 {
@@ -2426,7 +2541,7 @@ button,
   }
 
   .services__link--3 {
-    background-position: calc(50% - 271px) calc(50% - 110px);
+    background-position: calc(50% - 272px) calc(50% - 110px);
   }
 
   .services__content h3 {
@@ -2439,6 +2554,8 @@ button,
   }
 
   .callback-form__title {
+    margin-bottom: 8px;
+    margin-left: 0;
     font-size: 30px;
     line-height: 42px;
   }
@@ -2471,6 +2588,12 @@ button,
 
   .callback-form__textarea textarea {
     min-height: 180px;
+    padding: 24px 15px;
+  }
+
+  .callback-form__checkbox {
+    padding-bottom: 0;
+    padding-left: 5px;
   }
 
   .page-footer {
@@ -2611,6 +2734,41 @@ button,
     .page-header {
       background-image: -webkit-image-set(url("../img/page-header-mobile@2x.webp") 1x);
       background-image: image-set(url("../img/page-header-mobile@2x.webp") 1x);
+    }
+}
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .about__content::before {
+    background-image: url("../img/about@2x.jpg");
+  }
+
+@supports ((background-image: -webkit-image-set(url("../img/about@2x.webp") 2x)) or (background-image: image-set(url("../img/about@2x.webp") 2x))) {
+    .about__content::before {
+      background-image: -webkit-image-set(url("../img/about@2x.webp") 2x);
+      background-image: image-set(url("../img/about@2x.webp") 2x);
+    }
+}
+
+  .services__content a {
+    background-image: url("../img/services@2x.jpg");
+  }
+
+@supports ((background-image: -webkit-image-set(url("../img/services@2x.webp") 2x)) or (background-image: image-set(url("../img/services@2x.webp") 2x))) {
+    .services__content a {
+      background-image: -webkit-image-set(url("../img/services@2x.webp") 2x);
+      background-image: image-set(url("../img/services@2x.webp") 2x);
+    }
+}
+
+  .callback__plane {
+    background-image: url("../img/plane@2x.jpg");
+  }
+
+@supports ((background-image: -webkit-image-set(url("../img/plane@2x.webp") 2x)) or (background-image: image-set(url("../img/plane@2x.webp") 2x))) {
+    .callback__plane {
+      background-image: -webkit-image-set(url("../img/plane@2x.webp") 2x);
+      background-image: image-set(url("../img/plane@2x.webp") 2x);
     }
 }
 }

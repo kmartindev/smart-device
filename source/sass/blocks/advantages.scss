@@ -62,11 +62,10 @@
     background-color: $color-deep-sky-blue;
 
     transition: transform $trans-default;
-  }
 
-  &:hover::before,
-  &:focus::before {
-    transform: translateX(0);
+    @include vp-1023 {
+      transform: translateX(-98.5%);
+    }
   }
 
   @include vp-1023 {
@@ -80,25 +79,32 @@
   }
 }
 
+.advantages__content li:hover div,
+.advantages__content li:focus div {
+  &::before {
+    transform: translateX(0);
+  }
+}
+
 .advantages__content li:nth-child(n + 3) div {
   @include vp-767 {
     min-height: 325px;
   }
 }
 
-.advantages__content div:hover svg,
-.advantages__content div:hover h3,
-.advantages__content div:hover p,
-.advantages__content div:focus svg,
-.advantages__content div:focus h3,
-.advantages__content div:focus p {
+.advantages__content li:hover svg,
+.advantages__content li:hover h3,
+.advantages__content li:hover p,
+.advantages__content li:focus svg,
+.advantages__content li:focus h3,
+.advantages__content li:focus p {
   color: $color-alice-blue;
 }
 
 .advantages__content svg {
   position: relative;
 
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 
   color: $color-deep-sky-blue;
 

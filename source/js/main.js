@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import './modules/fixed-header';
 import './modules/cards-animation';
 import './modules/show-more';
+import './modules/parallax';
 import './modules/accordeon';
 
 // ---------------------------------
