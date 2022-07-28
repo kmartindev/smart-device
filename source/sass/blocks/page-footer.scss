@@ -1,3 +1,73 @@
 .page-footer {
+  padding-top: 50px;
+  padding-bottom: 57px;
+
   background-color: $color-black-pearl;
+
+  @include vp-1023 {
+    padding-top: 49px;
+    padding-bottom: 68px;
+  }
+
+  @include vp-767 {
+    padding-top: 35px;
+    padding-bottom: 36px;
+  }
+}
+
+.page-footer__content {
+  display: grid;
+  grid-template-columns: minmax(min-content, 30.74%) minmax(min-content, 40.98%) 1fr;
+
+  @include vp-1023 {
+    grid-template-columns: minmax(max-content, 52.24%) 1fr;
+  }
+
+  @include vp-767 {
+    grid-template-columns: auto;
+  }
+}
+
+.page-footer__section {
+  padding-top: 7px;
+  padding-right: 30px;
+
+  @include vp-1023 {
+    padding-right: 0;
+  }
+
+  @include vp-767 {
+    padding-top: 0;
+  }
+}
+
+.page-footer__section--1 {
+  padding-top: 0;
+
+  @include vp-1023 {
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    grid-column: auto;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+}
+
+.page-footer__section--2 {
+  @include vp-1023 {
+    padding-right: 30px;
+  }
+
+  @include vp-767 {
+    padding-right: 0;
+  }
 }

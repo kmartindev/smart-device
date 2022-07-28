@@ -10,8 +10,19 @@
 }
 
 .logo--page-footer {
+  margin-bottom: 30px;
+
+  @include vp-1023 {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
   @include vp-767 {
     width: 202px;
     height: 55px;
+    margin-right: 0;
+    margin-bottom: 15px;
+
+    transform: translateX(-9px);
   }
 }
