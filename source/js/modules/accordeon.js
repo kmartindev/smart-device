@@ -1,5 +1,8 @@
+const NOJS_CLASS = 'nojs';
 const accordeon = document.querySelector('[data-el="accordeon"]');
 const accordeonTitles = accordeon.querySelectorAll('[data-el="accordeon-title"]');
+
+document.body.classList.remove(NOJS_CLASS);
 
 accordeonTitles.forEach.call(accordeonTitles, function (accordeonTitle) {
   accordeonTitle.addEventListener('click', function () {

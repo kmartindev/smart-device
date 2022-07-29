@@ -5,6 +5,7 @@ import './modules/cards-animation';
 import './modules/show-more';
 import './modules/parallax';
 import './modules/accordeon';
+import './modules/validation';
 
 // ---------------------------------
 

@@ -11,7 +11,7 @@
     <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
-  <body>
+  <body class="nojs">
     <div class="wrapper">
       <header class="page-header" data-el="first-block">
         <div class="page-header__top  is-preloaded" data-el="header">
@@ -50,7 +50,7 @@
             <div class="main-screen">
               <h1>Печатные платы</h1>
               <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-              <a href="#">
+              <a href="#callback">
                 <span class="main-screen__button-text  main-screen__button-text--long">Получить бесплатную консультацию</span>
                 <span class="main-screen__button-text  main-screen__button-text--short">Бесплатная консультация</span>
               </a>
@@ -146,7 +146,7 @@
             </div>
           </div>
         </section>
-        <section class="callback" data-el="parallax">
+        <section class="callback" id="callback" data-el="parallax">
           <h2 class="visually-hidden">Задать вопрос</h2>
           <div class="container">
             <div class="callback__content">
@@ -161,12 +161,12 @@
                     </div>
                     <div class="callback-form__field">
                       <label class="visually-hidden" for="user-tel">Введите ваш телефон</label>
-                      <input id="user-tel" type="tel" name="tel" placeholder="Телефон" required>
+                      <input id="user-tel" data-el="input-tel" type="tel" name="tel" placeholder="Телефон" required>
                     </div>
                   </div>
                   <div class="callback-form__textarea">
                     <label class="visually-hidden" for="user-message">Введите ваш вопрос</label>
-                    <textarea id="user-message" name="message" placeholder="Ваш вопрос" required></textarea>
+                    <textarea id="user-message" name="message" placeholder="Ваш вопрос"></textarea>
                   </div>
                   <div class="callback-form__group  callback-form__group--2">
                     <div class="callback-form__checkbox">
@@ -282,11 +282,11 @@
               </div>
               <div class="feedback-form__field">
                 <label class="visually-hidden" for="user-tel-2">Введите ваш телефон</label>
-                <input id="user-tel-2" type="tel" name="tel" placeholder="Телефон" required>
+                <input id="user-tel-2" data-el="input-tel-2" type="tel" name="tel" placeholder="Телефон" required>
               </div>
               <div class="feedback-form__textarea">
                 <label class="visually-hidden" for="user-message-2">Введите ваш вопрос</label>
-                <textarea id="user-message-2" name="message" placeholder="Ваш вопрос" required></textarea>
+                <textarea id="user-message-2" name="message" placeholder="Ваш вопрос"></textarea>
               </div>
               <div class="feedback-form__group">
                 <div class="feedback-form__checkbox">
