@@ -6,6 +6,7 @@ import './modules/show-more';
 import './modules/parallax';
 import './modules/accordeon';
 import './modules/validation';
+import './modules/main-screen-link';
 
 // ---------------------------------
 

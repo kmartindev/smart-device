@@ -98,17 +98,3 @@
     line-height: 16px;
   }
 }
-
-.main-screen__button-text--long {
-  @include vp-767 {
-    display: none;
-  }
-}
-
-.main-screen__button-text--short {
-  display: none;
-
-  @include vp-767 {
-    display: block;
-  }
-}
