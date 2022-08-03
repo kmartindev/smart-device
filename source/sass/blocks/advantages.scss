@@ -45,9 +45,7 @@
 
   overflow: hidden;
 
-  cursor: pointer;
-
-  transition: transform $trans-default;
+  transition: transform 0.2s ease;
 
   &::before {
     content: "";
@@ -79,8 +77,7 @@
   }
 }
 
-.advantages__content li:hover div,
-.advantages__content li:focus div {
+.advantages__content li:hover div {
   &::before {
     transform: translateX(0);
   }
@@ -94,10 +91,7 @@
 
 .advantages__content li:hover svg,
 .advantages__content li:hover h3,
-.advantages__content li:hover p,
-.advantages__content li:focus svg,
-.advantages__content li:focus h3,
-.advantages__content li:focus p {
+.advantages__content li:hover p {
   color: $color-alice-blue;
 }
 

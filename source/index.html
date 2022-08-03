@@ -156,7 +156,7 @@
                       <label class="visually-hidden" for="user-name">Введите ваше имя</label>
                       <input id="user-name" type="text" name="name" placeholder="Имя" required>
                     </div>
-                    <div class="callback-form__field">
+                    <div class="callback-form__field" data-el="tel-field">
                       <label class="visually-hidden" for="user-tel">Введите ваш телефон</label>
                       <input id="user-tel" data-el="input-tel" type="tel" name="tel" placeholder="Телефон" required>
                     </div>
@@ -214,7 +214,7 @@
               <div class="footer-section  footer-section--nav  footer-nav">
                 <div class="footer-section__title" data-el="accordeon-title">
                   <h3 class="visually-hidden">Разделы сайта</h3>
-                  <button type="button">Разделы сайта</button>
+                  <button type="button" tabindex="-1">Разделы сайта</button>
                   <div>
                     <svg width="15" height="15" viewBox="0 0 64 64">
                       <rect y="28" width="64" height="6"/>
@@ -243,7 +243,7 @@
               <div class="footer-section  footer-section--contacts  footer-contacts">
                 <div class="footer-section__title" data-el="accordeon-title">
                   <h3 class="visually-hidden">Наш офис</h3>
-                  <button type="button">Наш офис</button>
+                  <button type="button" tabindex="-1">Наш офис</button>
                   <div>
                     <svg width="15" height="15" viewBox="0 0 64 64">
                       <rect y="28" width="64" height="6"/>
@@ -269,7 +269,7 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <form class="feedback__form  feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <form class="feedback__form  feedback-form" data-el="feedback-form" action="https://echo.htmlacademy.ru" method="post">
             <h2 class="feedback-form__title">Закажите звонок</h2>
             <p class="feedback-form__description">Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
             <div class="feedback-form__content">
@@ -277,7 +277,7 @@
                 <label class="visually-hidden" for="user-name-2">Введите ваше имя</label>
                 <input id="user-name-2" type="text" name="name" placeholder="Имя" required>
               </div>
-              <div class="feedback-form__field">
+              <div class="feedback-form__field" data-el="tel-field">
                 <label class="visually-hidden" for="user-tel-2">Введите ваш телефон</label>
                 <input id="user-tel-2" data-el="input-tel-2" type="tel" name="tel" placeholder="Телефон" required>
               </div>

@@ -22,7 +22,7 @@
   display: grid;
   grid-template-columns: 1fr 590px;
 
-  @include vp-1279 {
+  @include vp-1023 {
     grid-template-columns: auto;
   }
 }
@@ -33,7 +33,7 @@
 
   grid-column: 2 / -1;
 
-  @include vp-1279 {
+  @include vp-1023 {
     grid-column: auto;
   }
 }
@@ -41,7 +41,7 @@
 .callback__background {
   position: absolute;
   top: -50px;
-  right: calc(50% - 68px);
+  right: 46.25%;
   bottom: -50px;
   left: -50px;
 
@@ -49,18 +49,18 @@
 
   background-color: $color-black-pearl-50;
 
-  @include vp-1279 {
+  @include vp-1023 {
     display: none;
   }
 }
 
 .callback__plane {
   position: absolute;
-  top: calc(50% - 174px);
-  left: calc(50% - 609px);
+  top: calc(50% - 20.8%);
+  left: calc(50% - 31.9%);
 
-  width: 510px;
-  height: 285px;
+  width: 26.6vw;
+  aspect-ratio: 34/19;
 
   background-image: url("../img/plane.png");
   background-repeat: no-repeat;
@@ -80,6 +80,11 @@
   }
 
   @include vp-1279 {
+    top: calc(50% - 11%);
+    left: calc(50vw - 44%);
+  }
+
+  @include vp-1023 {
     display: none;
   }
 }

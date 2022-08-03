@@ -1,0 +1,20 @@
+[data-el="tel-field"] {
+  position: relative;
+}
+
+[data-el="tel-field"].is-invalid {
+  &::before {
+    content: "Правильный формат +7 (XXX) XX-XX-XX";
+
+    position: absolute;
+    top: -16px;
+    left: 0;
+
+    width: 100%;
+
+    font-family: "PT Mono", "Courier New", monospace;
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-torch-red;
+  }
+}

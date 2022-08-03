@@ -54,16 +54,12 @@
 .services__content ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 85px;
-  row-gap: 85px;
+  column-gap: 6.97%;
+  row-gap: 6.97%;
   margin: 0;
   padding: 0;
 
   list-style: none;
-
-  @include vp-1279 {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   @include vp-1023 {
     grid-template-columns: auto;
@@ -76,13 +72,15 @@
 
   display: block;
   width: 100%;
-  min-height: 650px;
-  padding: 47px 80px 50px 40px;
+  aspect-ratio: 7/13;
+  padding: 47px 40px 50px;
 
   background-color: $color-tangaroa;
   background-image: url("../img/services.jpg");
   background-repeat: no-repeat;
   background-size: 1493px 817px;
+
+  transition: $trans-default;
 
   @supports (background-image: image-set(url("../img/services.webp") 1x)) {
     background-image: image-set(url("../img/services.webp") 1x);
@@ -126,14 +124,26 @@
     background-size: 5px 10px;
     border-radius: 3px 0 0 0;
 
+    transition: $trans-default;
+
     @include vp-767 {
       width: 40px;
       height: 40px;
     }
   }
 
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 4px $color-default-black-25;
+
+    &::after {
+      background-color: $color-deep-sky-blue-70;
+    }
+  }
+
   @include vp-1023 {
     min-height: 250px;
+    aspect-ratio: auto;
     padding: 38px 45px;
   }
 

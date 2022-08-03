@@ -128,6 +128,10 @@
 }
 
 .footer-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
   @include vp-767 {
     padding: 0 25px 14px;
   }
@@ -145,6 +149,10 @@
 }
 
 .footer-section__wrapper div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
   @include vp-1023 {
     margin-bottom: 5px;
 
@@ -156,7 +164,7 @@
 
 .footer-section__description p,
 .footer-section__description a {
-  display: block;
+  display: flex;
   margin: 0;
 
   font-family: "PT Mono", "Courier New", monospace;
