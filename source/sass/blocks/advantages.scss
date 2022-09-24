@@ -29,7 +29,7 @@
 }
 
 .advantages__content li {
-  perspective: 1000px;
+  perspective: 1250px;
   transform-style: preserve-3d;
 }
 
@@ -80,6 +80,8 @@
 .advantages__content li:hover div {
   &::before {
     transform: translateX(0);
+
+    will-change: transform;
   }
 }
 

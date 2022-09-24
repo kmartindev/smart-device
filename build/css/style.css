@@ -1082,8 +1082,8 @@ button,
 }
 
 .advantages__content li {
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
+  -webkit-perspective: 1250px;
+  perspective: 1250px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
@@ -1125,6 +1125,7 @@ button,
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
+  will-change: transform;
 }
 
 .advantages__content li:hover svg,
@@ -1366,8 +1367,8 @@ button,
 
 .services__content a:hover,
 .services__content a:focus {
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .services__content a:hover::after,
@@ -1621,23 +1622,13 @@ button,
   outline-offset: 1px;
 }
 
-[data-el="tel-field"] {
-  position: relative;
-}
-
-[data-el="tel-field"].is-invalid::before {
-  content: "Правильный формат +7 (XXX) XX-XX-XX";
-  position: absolute;
-  top: -16px;
-  left: 0;
-  width: 100%;
-  font-family: "PT Mono", "Courier New", monospace;
-  font-size: 12px;
-  line-height: 14px;
-  color: red;
+[data-el="parallax"]:hover [data-el="layer"] {
+  will-change: transform;
 }
 
 [data-el="layer"] {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   -o-transition: transform 0.3s ease;
@@ -2037,8 +2028,8 @@ button,
   position: relative;
 }
 
-[data-el="tel-field"].is-error::before {
-  content: "Необходимый формат +7 (XXX) XX-XX-XX";
+[data-el="tel-field"].is-invalid::before {
+  content: "Правильный формат +7 (XXX) XX-XX-XX";
   position: absolute;
   top: -16px;
   left: 0;
@@ -2046,7 +2037,7 @@ button,
   font-family: "PT Mono", "Courier New", monospace;
   font-size: 12px;
   line-height: 14px;
-  color: red;
+  color: #ff1553;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {

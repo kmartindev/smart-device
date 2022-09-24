@@ -1,3 +1,11 @@
+[data-el="parallax"] {
+  &:hover [data-el="layer"] {
+    will-change: transform;
+  }
+}
+
 [data-el="layer"] {
+  transform: translate3d(0, 0, 0);
+
   transition: transform $trans-default;
 }
